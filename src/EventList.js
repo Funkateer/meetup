@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import { url } from 'inspector';
 
 class EventList extends Component {
   render() {
     return (
-      <div>
-      </div>
+      <ul className="EventList">
+      </ul>
     );
   }
 }
 
 export default EventList;
-
