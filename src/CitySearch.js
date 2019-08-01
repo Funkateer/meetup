@@ -6,7 +6,7 @@ class CitySearch extends Component {
     query: '',
     suggestions: [],
   }
-  
+
   handleInputChanged = (event) => {
     const value = event.target.value;
     this.setState({ query: value });
@@ -19,7 +19,7 @@ class CitySearch extends Component {
   render() {
     return (
       <div className="CitySearch">
-        <input type="text" className="city" value={this.state.query} 
+        <input type="text" className="city" value={this.state.query}
           onChange={this.handleInputChanged} placeholder="Search a city..."
         />
         <ul className="suggestions">
