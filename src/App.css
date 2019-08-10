@@ -1,104 +1,165 @@
-.App {
-text-align: center;
-padding: 2% 5%;
+html {
+  min-height: 100%;
+  background-color: #f0eeee;
 }
 
 .App * {
-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.App {
+  text-align: center;
+  padding: 2% 5%;
 }
 
 ul {
-padding: 0;
-list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 p {
 margin: 5px 0;
 }
 
+a, .link {
+  color: #f64060;
+}
+
+.header{
+  text-align: center;
+  color: #f64060;
+  font-size: 65px;
+  font-family: 'Beth Ellen', cursive;
+  margin: 0 0 15px 0;
+}
+
+.headerSpan{
+  font-size: 9px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 input[type="text"], input[type="number"] {
-padding: 8px 6px 8px 10px;
-border-radius: 4px;
-outline: none;
-border: 1px solid #ccc;
-font-size: 14px;
-line-height: 20px;
-align-self: center;
-height: 38px;
+  padding: 8px 6px 8px 10px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 20px;
+  align-self: center;
+  height: 38px;
 }
 
-.city {
-width: 250px;
-}
-
-.CitySearch {
-display: flex;
-flex-direction: column;
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="number"]:hover,
+input[type="number"]:focus {
+  border-color:  #f64060;
 }
 
 .suggestions {
-width: 250px;
-align-self: center;
-margin: 0;
-font-size: 14px;
+  width: 250px;
+  align-self: center;
+  margin: 0;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+.suggestions:empty {
+  border: none;
 }
 
 .suggestions > li {
-text-align: left;
-padding: 8px 6px 8px 10px;
-background-color: #eee;
-cursor: default;
+  text-align: left;
+  padding: 8px 6px 8px 10px;
+  background-color: #eee;
+  cursor: default;
+}
+
+.suggestions > li:hover {
+  background-color: #fff;
+  color:  #f64060;
 }
 
 .suggestions > li:last-child {
-border-bottom-left-radius: 4px;
-border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
+.city {
+  width: 250px;
+  margin-bottom: 10px;
+}
 
-.suggestions > li:hover {
-background-color: #BCDCDB;
+.CitySearch {
+  display: flex;
+  flex-direction: column;
 }
 
 .Event {
-padding: 10px 10px 20px;
-margin-bottom: 10px;
-text-align: left;
-border: 1px solid #ccc;
-border-radius: 4px;
-position: relative;
+  padding: 10px 10px 20px;
+  margin-bottom: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  background-color: #fff;
 }
 
 .details-btn {
-position: absolute;
-right: 5px;
-bottom: 5px;
-padding: 5px 8px;
-border-radius: 4px;
-outline: none;
-cursor: pointer;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  color:  #f64060;
+  background-color: #fff;
+}
+
+.details-btn:hover {
+  border: 1px solid #f64060;
+  color: #000;
 }
 
 .name {
-font-size: 18px;
-font-weight: 600;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .group-name {
-text-transform: uppercase;
-font-size: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .going, .visibility {
-font-style: italic;
+  font-style: italic;
 }
 
 .description {
-overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .number-of-events {
-width: 80px;
-margin: 20px 0 50px;
-text-align: right;
+  width: 80px;
+  margin: 10px 0 50px 0;
+  text-align: right;
+}
+
+@media all and (max-width: 700px) {
+  .App {
+    padding: 20px 10px;
+  }
+
+  .NumberOfEvents{
+    margin-top: 20px;
+  }
+
+  .suggestions {
+    margin-top: -35px;
+  }
 }
