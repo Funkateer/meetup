@@ -5,11 +5,13 @@ async function getOrRenewAccessToken(type, key) {
   let url;
   if (type === 'get') {
     // Lambda endpoint to get token by code
-    url = 'https://c5usrytrsg.execute-api.eu-central-1.amazonaws.com/dev/api/token/'
+    //CHANGE IT
+    url = 'https://00k0858r4l.execute-api.eu-central-1.amazonaws.com/dev/api/token/'
       + key;
   } else if (type === 'renew') {
     // Lambda endpoint to get token by refresh_token
-    url = 'https://c5usrytrsg.execute-api.eu-central-1.amazonaws.com/dev/api/refresh/'
+    //CHANGE IT
+    url = 'https://00k0858r4l.execute-api.eu-central-1.amazonaws.com/dev/api/refresh_token/'
       + key;
   }
 
