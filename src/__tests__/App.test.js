@@ -8,6 +8,7 @@ import NumberOfEvents from '../NumberOfEvents';
 
 import { mockEvents } from '../mock-events';
 
+// Unit test
 describe('<App /> component', () => {
   let AppWrapper;
   beforeAll(() => {
@@ -27,6 +28,7 @@ describe('<App /> component', () => {
   });
 });
 
+// Integration test
 describe('<App /> integration', () => {
   test('get list of events after user selects a city', () => {
     const AppWrapper = mount(<App />);
@@ -36,6 +38,17 @@ describe('<App /> integration', () => {
     CitySearchWrapper.instance().handleItemClicked('value', 1.1, 1.2);
     expect(AppWrapper.instance().updateEvents).toHaveBeenCalledTimes(1);
     expect(AppWrapper.instance().updateEvents).toHaveBeenCalledWith(1.1, 1.2);
+    AppWrapper.unmount();
+  });
+
+  test('get list of events after user specifies number of events', () => {
+    const AppWrapper = mount(<App />);
+    AppWrapper.instance().updateEvents = jest.fn();
+    AppWrapper.instance().forceUpdate();
+    const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+    NumberOfEventsWrapper.instance().onNumberChanged({ target: { value: 5 } });
+    expect(AppWrapper.instance().updateEvents).toHaveBeenCalledTimes(1);
+    expect(AppWrapper.instance().updateEvents).toHaveBeenCalledWith(null, null, 5);
     AppWrapper.unmount();
   });
 

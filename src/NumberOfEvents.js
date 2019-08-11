@@ -23,8 +23,8 @@ class NumberOfEvents extends Component {
         />
         <span> Events</span>
       </div>
-    );
-  }
+    );//return
+  }//render
 }
 
 export default NumberOfEvents;

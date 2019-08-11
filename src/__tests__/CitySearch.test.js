@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 
 import CitySearch from '../CitySearch';
 
+// Unit test
 describe('<CitySearch /> component', () => {
   let CitySearchWrapper;
   beforeAll(() => {
@@ -67,6 +68,7 @@ describe('<CitySearch /> component', () => {
   });
 });
 
+// Integration test
 describe('<CitySearch /> integration', () => {
   test('get a list of cities when user searches for Munich', async () => {
     const CitySearchWrapper = shallow(<CitySearch />);

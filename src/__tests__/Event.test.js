@@ -27,8 +27,8 @@ describe('<Event /> render', () => {
           },
         }
       }/>
-    );
-  });
+    );//EventWrapper
+  });//beforeAll func
 
   beforeEach(() => {
     EventWrapper.setState({ expanded: false });

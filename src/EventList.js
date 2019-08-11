@@ -11,8 +11,8 @@ class EventList extends Component {
           </li>
         )}
       </ul>
-    );
-  }
+    );//return
+  }//render
 }
 
 export default EventList

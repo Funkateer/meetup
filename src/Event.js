@@ -37,8 +37,8 @@ class Event extends Component {
         }
         <button className="details-btn" onClick={this.onDetailsButtonClicked}>Details</button>
       </div>
-    );
-  }
+    );//retuern
+  }//render
 }
 
 export default Event;
