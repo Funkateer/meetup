@@ -6,11 +6,13 @@ describe('show/hide an event details', () => {
   let page;
   beforeAll(async () => {
     jest.setTimeout(30000); // had to boost timeout from default 500s
-    const browser = await puppeteer.launch({
-      headless: false,
-      slowMo: 250
-    });
-    // browser = await puppeteer.launch();
+
+    // const browser = await puppeteer.launch({
+    //   headless: false,
+    //   slowMo: 250
+    // });
+
+    browser = await puppeteer.launch();
     page = await browser.newPage();
     await page.goto('http://localhost:3000/');
     await page.waitForSelector('.Event');
