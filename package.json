@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://funkateer.github.io/meetup/",
   "dependencies": {
+    "atatus-js": "^3.1.1",
     "axios": "^0.19.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
