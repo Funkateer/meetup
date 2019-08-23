@@ -192,6 +192,16 @@ margin-top: 20PX;
     font-size: 12px;
     padding-bottom: 5px;
   }
+  .CitySearch_input-title{
+    padding: 20px 0 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .CitySearch_input-label{
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
 
   .NumberOfEvents{
     margin: 10px;
