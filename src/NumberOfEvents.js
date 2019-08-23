@@ -14,10 +14,12 @@ class NumberOfEvents extends Component {
   render() {
     return (
       <div className="NumberOfEvents">
+        <label className="NumberOfEvents_input-label">Number of events:</label>
+        <br/>
         <span>Show </span>
         <input
           type="number"
-          className="number-of-events"
+          className="number-of-events_input"
           onChange={this.onNumberChanged}
           value={this.state.number}
         />
