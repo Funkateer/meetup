@@ -1,6 +1,8 @@
 html {
   min-height: 100%;
   background-color: #f0eeee;
+  padding: 0 0 ;
+  margin: 0 0 ;
 }
 
 .App * {
@@ -11,7 +13,6 @@ html {
 
 .App {
   text-align: center;
-  padding: 2% 5%;
 }
 
 ul {
@@ -28,11 +29,14 @@ a, .link {
 }
 
 .header{
+  height: 140px;
   text-align: center;
   color: #f64060;
-  font-size: 65px;
+  font-size: 70px;
   font-family: 'Beth Ellen', cursive;
-  margin: 0 0 15px 0;
+  margin: 0 ;
+  background-color: #ffffff;
+  padding-top: 10px;
 }
 
 .headerSpan{
@@ -51,6 +55,16 @@ input[type="text"], input[type="number"] {
   height: 38px;
 }
 
+.CitySearch_input-title{
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.CitySearch_input-label{
+  font-size: 12px;
+}
+
 input[type="text"]:hover,
 input[type="text"]:focus,
 input[type="number"]:hover,
@@ -58,7 +72,7 @@ input[type="number"]:focus {
   border-color:  #f64060;
 }
 
-.number-of-events {
+.number-of-events_input {
   width: 80px;
   margin: 3px 0 50px 0;
   text-align: right;
@@ -103,14 +117,26 @@ input[type="number"]:focus {
   flex-direction: column;
 }
 
+.EventList{
+  margin: 0 10%;
+}
+
 .Event {
   padding: 10px 10px 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: left;
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
   background-color: #fff;
+}
+
+.NumberOfEvents{
+margin-top: 20PX;
+}
+
+.NumberOfEvents_input-label{
+  font-size: 12px;
 }
 
 .details-btn {
@@ -152,11 +178,25 @@ input[type="number"]:focus {
 
 
 @media all and (max-width: 700px) {
-  .App {
-    padding: 20px 10px;
+  .header{
+    font-size: 60px
+  }
+  
+  .CitySearch_input-title{
+    padding: 20px 0 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .CitySearch_input-label{
+    font-size: 12px;
+    padding-bottom: 5px;
   }
 
   .NumberOfEvents{
-    margin-top: 30px;
+    margin: 10px;
+  }
+  .NumberOfEvents_input-label{
+    font-size: 12px;
   }
 }
