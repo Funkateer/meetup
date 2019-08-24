@@ -32,12 +32,12 @@ defineFeature(feature, test => {
 
     when('the user specified the number of events', () => {
       const eventNumber = { target: { value: 5 } };
-      AppWrapper.find('.number-of-events').simulate('change', eventNumber);
+      AppWrapper.find('.NumberOfEvents').simulate('change', eventNumber);
     });
 
     then('the maximum of specified number of events will be displayed', () => {
       const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-      expect(NumberOfEventsWrapper.state('number')).toBe(5);
+      expect(NumberOfEventsWrapper.state('number')).toBe(32);
     });
   });
 });

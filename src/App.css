@@ -111,10 +111,14 @@ input[type="number"]:focus {
 .CitySearch {
   display: flex;
   flex-direction: column;
+  margin-bottom: 12px;
+
 }
 
 .NumberOfEvents{
 margin-top: 20PX;
+margin: 3px 0 50px 0;
+
 }
 
 .NumberOfEvents_input-label{
@@ -123,7 +127,6 @@ margin-top: 20PX;
 
 .NumberOfEvents_input {
   width: 80px;
-  margin: 3px 0 50px 0;
   text-align: right;
 }
 

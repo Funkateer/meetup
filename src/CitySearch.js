@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { getSuggestions } from './api';
 
+import { InfoAlert } from './Alert';
+
 class CitySearch extends Component {
   state = {
     query: '',
     suggestions: [],
+    infoText:''
   }
 
   handleInputChanged = (event) => {
@@ -12,6 +15,15 @@ class CitySearch extends Component {
     this.setState({ query: value });
     getSuggestions(value).then(suggestions => {
       this.setState({ suggestions });
+      if (value && suggestions.length === 0) {
+        this.setState({
+          infoText: 'We can not find the city you are looking for. Please check the spelling or try another city',
+        });
+      } else {
+        this.setState({
+          infoText: '',
+        });
+      }
     });
   }
 
@@ -31,6 +43,7 @@ class CitySearch extends Component {
           value={this.state.query}
           onChange={this.handleInputChanged}
         />
+        <InfoAlert text={this.state.infoText} />
         <ul className="suggestions">
           {this.state.suggestions.map(item =>
             <li key={item.name_string} onClick={() => this.handleItemClicked(item.name_string, item.lat, item.lon)}>{item.name_string}</li>
