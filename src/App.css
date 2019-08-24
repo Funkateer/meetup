@@ -44,6 +44,16 @@ a, .link {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.CitySearch-title{
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.CitySearch_input-label{
+  font-size: 12px;
+}
+
 input[type="text"], input[type="number"] {
   padding: 8px 6px 8px 10px;
   border-radius: 4px;
@@ -55,16 +65,6 @@ input[type="text"], input[type="number"] {
   height: 38px;
 }
 
-.CitySearch_input-title{
-  padding: 20px 0;
-  font-weight: bold;
-  font-size: 21px;
-}
-
-.CitySearch_input-label{
-  font-size: 12px;
-}
-
 input[type="text"]:hover,
 input[type="text"]:focus,
 input[type="number"]:hover,
@@ -72,11 +72,7 @@ input[type="number"]:focus {
   border-color:  #f64060;
 }
 
-.number-of-events_input {
-  width: 80px;
-  margin: 3px 0 50px 0;
-  text-align: right;
-}
+
 
 .suggestions {
   width: 250px;
@@ -117,6 +113,20 @@ input[type="number"]:focus {
   flex-direction: column;
 }
 
+.NumberOfEvents{
+margin-top: 20PX;
+}
+
+.NumberOfEvents_input-label{
+  font-size: 12px;
+}
+
+.NumberOfEvents_input {
+  width: 80px;
+  margin: 3px 0 50px 0;
+  text-align: right;
+}
+
 .EventList{
   margin: 0 10%;
 }
@@ -129,14 +139,6 @@ input[type="number"]:focus {
   border-radius: 4px;
   position: relative;
   background-color: #fff;
-}
-
-.NumberOfEvents{
-margin-top: 20PX;
-}
-
-.NumberOfEvents_input-label{
-  font-size: 12px;
 }
 
 .details-btn {
@@ -179,20 +181,10 @@ margin-top: 20PX;
 
 @media all and (max-width: 700px) {
   .header{
-    font-size: 60px
-  }
-  
-  .CitySearch_input-title{
-    padding: 20px 0 10px 0;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 60px;
   }
 
-  .CitySearch_input-label{
-    font-size: 12px;
-    padding-bottom: 5px;
-  }
-  .CitySearch_input-title{
+  .CitySearch-title{
     padding: 20px 0 10px 0;
     font-weight: bold;
     font-size: 16px;
@@ -206,6 +198,7 @@ margin-top: 20PX;
   .NumberOfEvents{
     margin: 10px;
   }
+
   .NumberOfEvents_input-label{
     font-size: 12px;
   }
