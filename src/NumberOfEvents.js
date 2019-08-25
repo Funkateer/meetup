@@ -36,15 +36,7 @@ class NumberOfEvents extends Component {
     return (
       <div className="NumberOfEvents">
         <label className="NumberOfEvents_input-label">Number of events:</label>
-        <br/>
-        <span>Show </span>
-        <input
-          type="number"
-          className="NumberOfEvents_input"
-          onChange={this.onNumberChanged}
-          value={this.state.number}
-        />
-        <span> Events</span>
+        <input type="number" className="NumberOfEvents_input" onChange={this.onNumberChanged} value={this.state.number}/>
         <div className="alerts">
         <WarningAlert text ={this.state.warningText}/>
         <ErrorAlert text={this.state.errorText} />

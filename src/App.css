@@ -29,7 +29,7 @@ a, .link {
 }
 
 .alerts {
-  height: 80PX;
+  height: 50PX;
   padding-top: 3px;
 }
 
@@ -83,8 +83,6 @@ input[type="number"]:focus {
   border-color:  #f64060;
 }
 
-
-
 .suggestions {
   width: 250px;
   align-self: center;
@@ -115,7 +113,9 @@ input[type="number"]:focus {
 }
 
 .NumberOfEvents{
-margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
 }
 
 .NumberOfEvents_input-label{
@@ -185,29 +185,26 @@ margin-bottom: 12px;
 
 @media all and (max-width: 700px) {
   .alerts {
-    height: 30PX;
+    height: 50PX;
   }
 
   .header{
+    height: 105px;
     font-size: 60px;
   }
 
   .CitySearch-title{
-    padding: 20px 0 10px 0;
+    padding: 10px 0;
     font-weight: bold;
     font-size: 16px;
   }
 
-  .CitySearch_input-label{
+  .CitySearch_input-label ,
+  .NumberOfEvents_input-label {
     font-size: 12px;
-    padding-bottom: 5px;
   }
 
   .NumberOfEvents{
     margin: 10px;
-  }
-
-  .NumberOfEvents_input-label{
-    font-size: 12px;
   }
 }
