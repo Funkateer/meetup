@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 
-import { ErrorAlert } from './Alert';
+import { ErrorAlert, WarningAlert } from './Alert';
 
 class NumberOfEvents extends Component {
   state = {
     number: 32,
-    errorText:''
+    errorText:'',
+    warningText:''
   }
 
   onNumberChanged = (event) => {
     const value = event.target.value;
     this.setState({ number: value });
+    this.setState({warnigText: ""})
     if(value < 1)
     {
       this.setState({ errorText: " Number of events should be at least 1" })
@@ -19,6 +21,14 @@ class NumberOfEvents extends Component {
     {
       this.props.updateEvents(null, null, value);
       this.setState({ errorText: "" })
+    }
+    if (!navigator.onLine)
+    {
+    this.setState({ warningText: "You are offline, all the events are loaded from previous session" });
+    }
+    else
+    {
+      this.setState({ warningText: "" })
     }
   }
 
@@ -35,7 +45,10 @@ class NumberOfEvents extends Component {
           value={this.state.number}
         />
         <span> Events</span>
+        <div className="alerts">
+        <WarningAlert text ={this.state.warningText}/>
         <ErrorAlert text={this.state.errorText} />
+        </div>
       </div>
     );//return
   }//render
