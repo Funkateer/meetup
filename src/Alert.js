@@ -9,7 +9,7 @@ class Alert extends Component {
   getStyle = () => {
     return {
       color: this.color,
-      fontSize: '10px',
+      fontSize: '12px',
       fontStyle: 'italic',
     };
   }

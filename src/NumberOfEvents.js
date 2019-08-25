@@ -13,7 +13,7 @@ class NumberOfEvents extends Component {
     this.setState({ number: value });
     if(value < 1)
     {
-      this.setState({ errorText: " Number should be at least 1." })
+      this.setState({ errorText: " Number of events should be at least 1" })
     }
     else
     {
