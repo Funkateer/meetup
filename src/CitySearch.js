@@ -37,18 +37,14 @@ class CitySearch extends Component {
       <div className="CitySearch">
         <p className="CitySearch-title"> Find Meetup events in the city of your choice.</p>
         <label className="CitySearch_input-label"> Enter a city name:</label>
-        <input
-          type="text"
-          className="city"
-          value={this.state.query}
-          onChange={this.handleInputChanged}
-        />
-        <InfoAlert text={this.state.infoText} />
+        <input type="text" className="city" value={this.state.query} onChange={this.handleInputChanged}/>
         <ul className="suggestions">
           {this.state.suggestions.map(item =>
             <li key={item.name_string} onClick={() => this.handleItemClicked(item.name_string, item.lat, item.lon)}>{item.name_string}</li>
           )}
         </ul>
+        <InfoAlert text={this.state.infoText} />
+ 
       </div>
     );//return
   }//render
