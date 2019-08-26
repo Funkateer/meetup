@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { PieChart, Pie, Tooltip, Cell, Legend, ResponsiveContainer } from 'recharts';
 
 class Event extends Component {
   state = {
     expanded: false,
+    events: []
   }
 
   onDetailsButtonClicked = () => {
@@ -13,12 +15,16 @@ class Event extends Component {
 
   render() {
     const event = this.props.event;
+    const data=[],
+    colors =[ "#8884d8", "#4dd2ff"];
+
+   data.push({ name: "people going", value: event.yes_rsvp_count }, { name: "slots left", value: (event.rsvp_limit - event.yes_rsvp_count) });
+
     return (
       <div className="Event">
         <p className="time">{event.local_time} - {event.local_date}</p>
         <p className="name">{event.name}</p>
         {event.group && event.group.name && <p className="group-name">Group: {event.group.name}</p>}
-        <p className="going">{event.yes_rsvp_count} people are going</p>
         {this.state.expanded &&
           <div className="extra">
             {event.venue && event.venue.name &&
@@ -33,11 +39,24 @@ class Event extends Component {
             <div className="description" dangerouslySetInnerHTML={{__html: event.description}} />
             <p className="visibility">{event.visibility}</p>
             <a className="link" href={event.link}>Event Link</a>
-          </div>
+            <p className="going">{
+              <ResponsiveContainer height={100} width={400}>
+                  <PieChart width={730} height={250}>
+                  <Pie data= {data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={40}  label >
+                    {
+                      data.map((entry, index) => (<Cell key={`cell-${index}`} fill={colors[index]}/>))
+                    }
+                  </Pie>
+                <Legend iconSize={20} iconType = "circle" layout="vertical" verticalAlign="middle" align="left" />
+                <Tooltip/>
+                </PieChart>
+              </ResponsiveContainer>}
+            </p>
+          </div> //extra
         }
         <button className="details-btn" onClick={this.onDetailsButtonClicked}>Details</button>
       </div>
-    );//retuern
+    );//return
   }//render
 }
 
