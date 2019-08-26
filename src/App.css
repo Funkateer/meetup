@@ -29,8 +29,8 @@ a, .link {
 }
 
 .alerts {
-  height: 50PX;
-  padding-top: 3px;
+  height: 12px;
+  margin:3px;
 }
 
 .header{
@@ -115,7 +115,6 @@ input[type="number"]:focus {
 .NumberOfEvents{
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
 }
 
 .NumberOfEvents_input-label{
@@ -128,7 +127,7 @@ input[type="number"]:focus {
 }
 
 .EventList{
-  margin: 0 10%;
+  margin: 1% 10%;
 }
 
 .Event {
@@ -182,10 +181,10 @@ input[type="number"]:focus {
   overflow-x: hidden;
 }
 
-
 @media all and (max-width: 700px) {
   .alerts {
-    height: 50PX;
+    height: 12PX;
+    font-size: 9px
   }
 
   .header{
@@ -205,6 +204,10 @@ input[type="number"]:focus {
   }
 
   .NumberOfEvents{
-    margin: 10px;
+    margin: 3px;
+  }
+
+  .EventList{
+margin-top: 10px
   }
 }

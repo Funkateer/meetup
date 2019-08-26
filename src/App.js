@@ -5,6 +5,7 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents } from './api';
+import {  WarningAlert } from './Alert';
 
 class App extends Component {
   state = {
@@ -12,6 +13,7 @@ class App extends Component {
     lat: null,
     lon: null,
     page: null,
+    warningText:''
   }
 
   componentDidMount() {
@@ -19,6 +21,14 @@ class App extends Component {
   }
 
   updateEvents = (lat, lon, page) => {
+    if (!navigator.onLine)
+    {
+    this.setState({ warningText: "You are currently offline, events are loaded from last session" });
+    }
+    else
+    {
+      this.setState({ warningText: "" })
+    }
     if (lat && lon) {
       getEvents(lat, lon, this.state.page).then(events =>
         this.setState({ events, lat, lon })
@@ -40,6 +50,9 @@ class App extends Component {
         <h1 className = "header">Meetup<span className="headerSpan"> ... almost</span></h1>
         <CitySearch updateEvents={this.updateEvents} />
         <NumberOfEvents updateEvents={this.updateEvents} />
+        <div className="alerts">
+          <WarningAlert className="alerts_text" text ={this.state.warningText}/>
+        </div>
         <EventList events={this.state.events} />
       </div>
     );

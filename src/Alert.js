@@ -11,6 +11,7 @@ class Alert extends Component {
       color: this.color,
       fontSize: '12px',
       fontStyle: 'italic',
+      margin: '0',
     };
   }
 
@@ -41,14 +42,6 @@ class ErrorAlert extends Alert {
   constructor(props) {
     super(props);
     this.color = 'red';
-  }
-  getStyle=() => {
-    return {
-      color:this.color,
-      fontSize: '12px',
-      fontStyle: 'italic',
-      position: 'relative',
-    };
   }
 }
 
