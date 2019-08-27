@@ -50,7 +50,8 @@ class Event extends Component {
                 <Legend iconSize={20} iconType = "circle" layout="vertical" verticalAlign="middle" align="left" />
                 <Tooltip/>
                 </PieChart>
-              </ResponsiveContainer>}
+              </ResponsiveContainer>
+            }
             </p>
           </div> //extra
         }

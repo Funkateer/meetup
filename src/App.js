@@ -9,7 +9,7 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents } from './api';
-import {  WarningAlert } from './Alert';
+import { WarningAlert } from './Alert';
 
 class App extends Component {
   state = {
@@ -47,6 +47,7 @@ class App extends Component {
       );
     }
   }
+
   countEventsOnADate = (date) => {
     let count = 0;
     for (let i = 0; i < this.state.events.length; i += 1) {
