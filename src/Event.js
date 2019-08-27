@@ -40,7 +40,7 @@ class Event extends Component {
             <p className="visibility">{event.visibility}</p>
             <a className="link" href={event.link}>Event Link</a>
             <p className="going">{
-              <ResponsiveContainer height={100} width={400}>
+              <ResponsiveContainer height={140} width={420}>
                   <PieChart width={730} height={250}>
                   <Pie data= {data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={40}  label >
                     {
@@ -55,7 +55,7 @@ class Event extends Component {
           </div> //extra
         }
         <button className="details-btn" onClick={this.onDetailsButtonClicked}>Details</button>
-      </div>
+      </div>//Event
     );//return
   }//render
 }

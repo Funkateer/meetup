@@ -11,10 +11,10 @@ class NumberOfEvents extends Component {
   onNumberChanged = (event) => {
     const value = event.target.value;
     this.setState({ number: value });
-    this.setState({warnigText: ""})
+    this.setState({warningText: ""})
     if(value < 1)
     {
-      this.setState({ errorText: " Number of events must be at least 1" })
+      this.setState({ errorText: "Number of events must be at least 1" })
     }
     else
     {

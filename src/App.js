@@ -75,24 +75,23 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className = "header">Meetup<span className="headerSpan"> ... almost</span></h1>
+        <p className="CitySearch-title"> Find Meetup events in the city of your choice</p>
         <CitySearch updateEvents={this.updateEvents} />
         <NumberOfEvents updateEvents={this.updateEvents} />
         <div className="alerts">
           <WarningAlert className="alerts_text" text ={this.state.warningText}/>
         </div>
-        <ResponsiveContainer height={300}>
-          <ScatterChart
-          margin={{
-            top: 20, right: 20, bottom: 20, left: 20,
-          }}
-        >
-          <CartesianGrid />
-          <XAxis type="category" dataKey="date" name="date" />
-          <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
-          <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-          <Scatter name="A school" data={this.getData()} fill="#8884d8" />
-        </ScatterChart>
-        </ResponsiveContainer>
+        <div className= "responsiveContainer-scatter">
+          <ResponsiveContainer height={240} >
+            <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+            <CartesianGrid strokeDasharray= '3 3' />
+            <XAxis type="category" dataKey="date" name="date" />
+            <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
+            <Tooltip cursor={{ stroke: '3 3' }} />
+            <Scatter name="A school" data={this.getData()} fill="#8884d8" />
+          </ScatterChart>
+          </ResponsiveContainer>
+        </div>
         <EventList events={this.state.events} />
       </div>
     );

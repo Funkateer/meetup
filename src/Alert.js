@@ -11,7 +11,7 @@ class Alert extends Component {
       color: this.color,
       fontSize: '12px',
       fontStyle: 'italic',
-      margin: '0',
+      margin: '0'
     };
   }
 
