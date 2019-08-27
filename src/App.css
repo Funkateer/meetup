@@ -31,6 +31,7 @@ a, .link {
 .alerts {
   height: 12px;
   margin:3px;
+  line-height: 1
 }
 
 .header{
@@ -83,12 +84,15 @@ input[type="number"]:focus {
 }
 
 .suggestions {
+  top: 300px;
   width: 250px;
   align-self: center;
   margin: 0;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  position: absolute;
+  z-index: 1;
 }
 
 .suggestions:empty {
@@ -206,12 +210,16 @@ input[type="number"]:focus {
     font-size: 12px;
   }
 
-  .responsiveContainer-scatter {
-    margin: 0 10px 0 -40px;
+  .suggestions{
+    top: 240px
   }
 
   .NumberOfEvents {
-    margin: 3px;
+    margin: 9px 0 3px 0;
+  }
+
+  .responsiveContainer-scatter {
+    margin: 0 10px 0 -40px;
   }
 
   .Event {

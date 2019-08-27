@@ -53,9 +53,9 @@ class CitySearch extends Component {
             <li key={item.name_string} onClick={() => this.handleItemClicked(item.name_string, item.lat, item.lon)}>{item.name_string}</li>
           )}
         </ul>
-        <InfoAlert text={this.state.infoText} />
-        {/* <WarningAlert className="alerts_text" text ={this.state.warningText}/> */}
-
+        <div className="alerts">
+          <InfoAlert text={this.state.infoText} />
+        </div>
       </div>
     );//return
   }//render
