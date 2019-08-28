@@ -40,14 +40,14 @@ class Event extends Component {
             <p className="visibility">{event.visibility}</p>
             <a className="link" href={event.link}>Event Link</a>
             <p className="going">{
-              <ResponsiveContainer height={140} width={420}>
-                  <PieChart width={730} height={250}>
-                  <Pie data= {data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={40}  label >
+              <ResponsiveContainer height={160} width={290}>
+                  <PieChart>
+                  <Pie data= {data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={32}  label >
                     {
                       data.map((entry, index) => (<Cell key={`cell-${index}`} fill={colors[index]}/>))
                     }
                   </Pie>
-                <Legend iconSize={20} iconType = "circle" layout="vertical" verticalAlign="middle" align="left" />
+                <Legend iconSize={12} iconType = "circle" layout="vertical" verticalAlign="middle" align="left" />
                 <Tooltip/>
                 </PieChart>
               </ResponsiveContainer>

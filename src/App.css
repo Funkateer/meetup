@@ -1,8 +1,8 @@
 html {
   min-height: 100%;
   background-color: #f0eeee;
-  padding: 0 0 ;
-  margin: 0 0 ;
+  padding: 0 0;
+  margin: 0 0;
 }
 
 .App * {
@@ -31,7 +31,7 @@ a, .link {
 .alerts {
   height: 12px;
   margin:3px;
-  line-height: 1
+  line-height: 1;
 }
 
 .header{
@@ -191,7 +191,7 @@ input[type="number"]:focus {
 @media all and (max-width: 700px) {
   .alerts {
     height: 12PX;
-    font-size: 9px
+    font-size: 9px;
   }
 
   .header {
@@ -211,7 +211,7 @@ input[type="number"]:focus {
   }
 
   .suggestions{
-    top: 240px
+    top: 240px;
   }
 
   .NumberOfEvents {
@@ -223,19 +223,15 @@ input[type="number"]:focus {
   }
 
   .Event {
-    padding: 6px 12px
+    padding: 6px 12px;
   }
 
   .EventList {
     margin: 5px 15px;
-    font-size: .7rem
+    font-size: .7rem;
   }
 
   .time, .name, .group-name, .details-btn {
-    font-size: .7rem
-  }
-
-  .recharts-wrapper *{
-    width: 80%;
+    font-size: .7rem;
   }
 }
