@@ -3,12 +3,13 @@ html {
   background-color: #f0eeee;
   padding: 0 0;
   margin: 0 0;
+  font-size: 14px
 }
 
 .App * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .App {
@@ -166,8 +167,13 @@ input[type="number"]:focus {
   color: #000;
 }
 
+.time{
+  font-size: 12px;
+  color: rgb(100, 100, 100)
+}
+
 .name {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
 }
 
@@ -175,9 +181,13 @@ input[type="number"]:focus {
   width: 250px;
 }
 
+.address{
+  font-size: 12px;
+}
+
 .group-name {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .going, .visibility {
@@ -210,6 +220,12 @@ input[type="number"]:focus {
     font-size: 12px;
   }
 
+  input[type="text"], input[type="number"] {
+    padding: 6px 4px ;
+    font-size: 12px;
+    height: 24px;
+  }
+
   .suggestions{
     top: 240px;
   }
@@ -220,6 +236,7 @@ input[type="number"]:focus {
 
   .responsiveContainer-scatter {
     margin: 0 10px 0 -40px;
+    font-size: 12px
   }
 
   .Event {
@@ -231,7 +248,11 @@ input[type="number"]:focus {
     font-size: .7rem;
   }
 
-  .time, .name, .group-name, .details-btn {
-    font-size: .7rem;
+  .name, .group-name, .details-btn, .description{
+    font-size: .9rem;
+  }
+
+  .time, .address{
+    font-size: .75rem;
   }
 }
