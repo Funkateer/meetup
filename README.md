@@ -2,12 +2,12 @@
 This progressive web application can be downloaded so it looks identical to a normal mobile app, uses the Meetup API to fetch upcoming events visualized in plot or pie charts and much more.
 The app is built with a test-driven development method using Jest and Puppeteers for tests, the back-end functions are hosted in AWS
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
 ## Live Demo
 To see the app in action, go to (https://funkateer.github.io/meetup/)
+
 
 ## Screenshots
 ![screenshot](https://alabugrara.com/img/meetup-poster.png)
@@ -96,7 +96,7 @@ Project Link: https://github.com/Funkateer/meetup
 
 
 ## Contact
-Alaeddin Abugrara - [website](http://www.alabugrara.com) - [@twitter](https://twitter.com/twitter_handle) - [Github](https://github.com/Funkateer) - [Linked-in](https://www.linkedin.com/in/al%C3%A0-eddin-abugrara-214ba5115/)
+Alà Eddin Abugrara - [website](http://www.alabugrara.com) - [@twitter](https://twitter.com/twitter_handle) - [Github](https://github.com/Funkateer) - [Linked-in](https://www.linkedin.com/in/al%C3%A0-eddin-abugrara-214ba5115/)
 
 
 <!-- Markdown links & imgs  -->
