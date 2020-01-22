@@ -1,0 +1,258 @@
+html {
+  min-height: 100%;
+  background-color: #f0eeee;
+  padding: 0 0;
+  margin: 0 0;
+  font-size: 14px
+}
+
+.App * {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+.App {
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 5px 0;
+}
+
+a, .link {
+  color: #f64060;
+}
+
+.alerts {
+  height: 12px;
+  margin:3px;
+  line-height: 1;
+}
+
+.header{
+  height: 155px;
+  text-align: center;
+  color: #f64060;
+  font-size: 90px;
+  font-family: 'Beth Ellen', cursive;
+  margin: 0 ;
+  background-color: #ffffff;
+}
+
+.headerSpan{
+  font-size: 9px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.CitySearch {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+
+}
+
+.CitySearch-title{
+  padding: 20px 0 20px 0;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.CitySearch_input-label{
+  font-size: 12px;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 8px 4px ;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  align-self: center;
+  height: 28px;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="number"]:hover,
+input[type="number"]:focus {
+  border-color:  #f64060;
+}
+
+.suggestions {
+  top: 300px;
+  width: 250px;
+  align-self: center;
+  margin: 0;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+}
+
+.suggestions:empty {
+  border: none;
+}
+
+.suggestions > li {
+  text-align: left;
+  padding: 8px 6px 8px 10px;
+  background-color: #eee;
+  cursor: default;
+}
+
+.suggestions > li:hover {
+  background-color: #fff;
+  color:  #f64060;
+}
+
+.suggestions > li:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.NumberOfEvents {
+  display: flex;
+  flex-direction: column;
+}
+
+.NumberOfEvents_input-label {
+  font-size: 12px;
+}
+
+.NumberOfEvents_input {
+  width: 80px;
+  text-align: right;
+}
+
+.responsiveContainer-scatter {
+  margin: 0 20%
+}
+
+.EventList{
+  margin:  0 15% 2% 15%;
+}
+
+.Event {
+  padding: 12px 24px;
+  margin-bottom: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  background-color: #fff;
+}
+
+.details-btn {
+  right: 10px;
+  bottom: 20px;
+  padding: 0 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  color:  #f64060;
+  background-color: #fff;
+}
+
+.details-btn:hover {
+  border: 1px solid #f64060;
+  color: #000;
+}
+
+.time{
+  font-size: 12px;
+  color: rgb(100, 100, 100)
+}
+
+.name {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.city {
+  width: 250px;
+}
+
+.address{
+  font-size: 12px;
+}
+
+.group-name {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.going, .visibility {
+  font-style: italic;
+}
+
+.description {
+  overflow-x: hidden;
+}
+
+@media all and (max-width: 700px) {
+  .alerts {
+    height: 12PX;
+    font-size: 9px;
+  }
+
+  .header {
+    height: 105px;
+    font-size: 60px;
+  }
+
+  .CitySearch-title {
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .CitySearch_input-label ,
+  .NumberOfEvents_input-label {
+    font-size: 12px;
+  }
+
+  input[type="text"], input[type="number"] {
+    padding: 6px 4px ;
+    font-size: 12px;
+    height: 24px;
+  }
+
+  .suggestions{
+    top: 240px;
+  }
+
+  .NumberOfEvents {
+    margin: 9px 0 3px 0;
+  }
+
+  .responsiveContainer-scatter {
+    margin: 0 10px 0 -40px;
+    font-size: 12px
+  }
+
+  .Event {
+    padding: 6px 12px;
+  }
+
+  .EventList {
+    margin: 5px 15px;
+    font-size: .7rem;
+  }
+
+  .name, .group-name, .details-btn, .description{
+    font-size: .9rem;
+  }
+
+  .time, .address{
+    font-size: .75rem;
+  }
+}
