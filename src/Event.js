@@ -29,13 +29,10 @@ class Event extends Component {
           <div className="extra">
             {event.venue && event.venue.name &&
               <p className="address">
-                {event.venue.name
-                  + ', ' + event.venue.address_1
-                  + ', ' + event.venue.city
-                  + ', ' + event.venue.localized_country_name
-                }
+                {event.venue.name + ', ' + event.venue.address_1 + ', ' + event.venue.city + ', ' + event.venue.localized_country_name }
               </p>
-            } <br/>
+            }
+            <br/>
             <div className="description" dangerouslySetInnerHTML={{__html: event.description}} />
             <br/>
             <p className="visibility">{event.visibility}</p>

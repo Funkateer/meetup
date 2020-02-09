@@ -41,7 +41,6 @@ defineFeature(feature, test => {
     });
   });
 
-
   test('User can select a city from the suggested list', ({ given, and, when, then }) => {
     let AppWrapper;
     given('user was typing “Munich” in the city textbox', () => {
@@ -62,7 +61,6 @@ defineFeature(feature, test => {
       const CitySearchWrapper = AppWrapper.find(CitySearch);
       expect(CitySearchWrapper.state('query')).toBe('Munich, Germany');
     });
-
 
     and('the user should receive a list of upcoming events in that city', () => {
       expect(AppWrapper.find('.Event')).toHaveLength(mockEvents.events.length);

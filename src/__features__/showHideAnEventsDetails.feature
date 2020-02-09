@@ -17,3 +17,4 @@ Scenario: User can collapse an event to hide its details
   And the user expanded event's details
   When the user clicks Hide details button
   Then the event description collapses
+  

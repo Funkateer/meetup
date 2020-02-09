@@ -9,3 +9,4 @@ Scenario: User can change the number of events they want to see
   Given user opened the app
   When the user specified the number of events
   Then the maximum of specified number of events will be displayed
+  
