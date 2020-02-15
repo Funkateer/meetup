@@ -10,7 +10,7 @@ To see the app in action, go to (https://funkateer.github.io/meetup/)
 
 
 ## Screenshots
-![screenshot](https://alabugrara.com/img/meetup-poster.png)
+![screenshot](https://alabugrara.com/img/poster-meetup.png)
 
 
 ## Available Scripts
